@@ -79,7 +79,6 @@ public class SpringHotelappRestapiApplication implements CommandLineRunner{
 //		hotelService.getHotelsByLocationAndMenu("KAR", "Paratha");
 		//
 		
-		
 		menuService.getMenusByHotel("A2B")
 		.forEach((h)->System.out.println(h));
 		
