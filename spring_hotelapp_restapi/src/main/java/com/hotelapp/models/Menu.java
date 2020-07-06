@@ -8,6 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -27,6 +29,7 @@ public class Menu {
 	
 	@ManyToOne
 	@JoinColumn(name="hotel_id")
+	@JsonIgnore
 	private Hotel hotel;
 
 	public Menu(String menuName, double price) {

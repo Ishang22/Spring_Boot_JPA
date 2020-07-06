@@ -15,16 +15,16 @@ public class HotelServiceImpl implements HotelService {
 	HotelRepository hotelrepositry;	
 	
 	@Override
-	public void addHotel(Hotel hotel) {
+	public Hotel addHotel(Hotel hotel) {
 		// TODO Auto-generated method stub
-		  hotelrepositry.save(hotel);	
+		 return hotelrepositry.save(hotel);	
 
 	}
 
 	@Override
-	public void updateHotel(Hotel hotel) {
+	public Hotel updateHotel(Hotel hotel) {
 		// TODO Auto-generated method stub
-			hotelrepositry.save(hotel);	
+			return hotelrepositry.save(hotel);	
 	}
 
 	@Override
@@ -51,6 +51,7 @@ public class HotelServiceImpl implements HotelService {
 	@Override
 	public List<Hotel> getHotelsByMenu(String menuName) {
 		// TODO Auto-generated method stub
+		System.out.println("=====menuName====menuName===="+menuName);
 		return hotelrepositry.findHotelsByMenu(menuName);
 	}
 
